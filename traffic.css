@@ -1,0 +1,184 @@
+/* ================= BODY ================= */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ================= HEADER ================= */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #ffcc00;
+  animation: glow 1.5s infinite alternate;
+}
+
+header h2 {
+  font-size: 2rem;
+}
+
+.description {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* ================= TRAFFIC LIGHT CONTAINER ================= */
+.traffic-lights {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #222;
+  padding: 20px;
+  border: 5px solid rgb(99, 241, 16);
+  border-radius: 20px;
+  box-shadow: 0 0 20px #000 inset;
+  animation: popIn 1s ease-in-out;
+  width: 200px;
+}
+
+/* ================= TRAFFIC LIGHT STYLE ================= */
+.light {
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+  border-radius: 50%;
+  background-color: #333;
+  box-shadow: inset 0 0 10px #000;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Active light animations */
+.red.active {
+  background-color: #ff1e1e;
+  box-shadow: 0 0 40px #ff1e1e, inset 0 0 15px #ff1e1e;
+  animation: blinkRed 1s infinite alternate;
+}
+.yellow.active {
+  background-color: #ffea00;
+  box-shadow: 0 0 40px #ffea00, inset 0 0 15px #ffea00;
+  animation: blinkYellow 1s infinite alternate;
+}
+.green.active {
+  background-color: #00ff6a;
+  box-shadow: 0 0 40px #00ff6a, inset 0 0 15px #00ff6a;
+  animation: blinkGreen 1s infinite alternate;
+}
+
+/* ================= INFO SECTION ================= */
+.info-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin-top: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.info-section h3 {
+  margin-top: 10px;
+}
+
+.info-section ul {
+  list-style: inside disc;
+  margin-left: 10px;
+}
+
+/* ================= HOME BUTTON ================= */
+#homeBtn {
+  margin-top: 30px;
+  padding: 12px 25px;
+  background-color: #444;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#homeBtn:hover {
+  background-color: #666;
+}
+
+/* ================= GAME TIMER ================= */
+#timer {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffcc00;
+  margin-bottom: 15px;
+  animation: glow 1.5s infinite alternate;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes glow {
+  from { text-shadow: 0 0 5px #ffcc00; }
+  to { text-shadow: 0 0 20px #ffcc00; }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes blinkRed {
+  0% { box-shadow: 0 0 40px #ff1e1e, inset 0 0 15px #ff1e1e; }
+  100% { box-shadow: 0 0 60px #ff1e1e, inset 0 0 25px #ff1e1e; }
+}
+
+@keyframes blinkYellow {
+  0% { box-shadow: 0 0 40px #ffea00, inset 0 0 15px #ffea00; }
+  100% { box-shadow: 0 0 60px #ffea00, inset 0 0 25px #ffea00; }
+}
+
+@keyframes blinkGreen {
+  0% { box-shadow: 0 0 40px #00ff6a, inset 0 0 15px #00ff6a; }
+  100% { box-shadow: 0 0 60px #00ff6a, inset 0 0 25px #00ff6a; }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header h2 {
+    font-size: 1.5rem;
+  }
+
+  .light {
+    width: 70px;
+    height: 70px;
+  }
+
+  #timer {
+    font-size: 3rem;
+  }
+
+  #homeBtn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

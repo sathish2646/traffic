@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic Light Timer</title>
+  <link rel="stylesheet" href="./traffic.css">
+</head>
+<body>
+
+  <!-- PAGE HEADER -->
+  <header>
+    <h1 id="timer">60</h1>
+    <h2>🚦 Traffic Light Timer</h2>
+    <p class="description">
+      Traffic lights control the flow of traffic by using colored lights — red, yellow, and green.  
+      Red means stop 🚫, yellow means caution ⚠️, and green means go 🟢.  
+      This timer simulates a traffic light sequence to help you understand timing and reflexes.
+    </p>
+  </header>
+
+  <!-- TRAFFIC LIGHT SIMULATION -->
+  <div class="traffic-lights">
+    <div class="light red"></div>
+    <div class="light yellow"></div>
+    <div class="light green"></div>
+  </div>
+
+  <!-- ADDITIONAL CONTENT -->
+  <section class="info-section">
+    <h3>How Traffic Lights Work</h3>
+    <ul>
+      <li><b>Red Light:</b> Stop and wait until the light changes.</li>
+      <li><b>Yellow Light:</b> Prepare to stop — the light will soon turn red.</li>
+      <li><b>Green Light:</b> Go safely if the intersection is clear.</li>
+    </ul>
+
+    <h3>Fun Fact 🎯</h3>
+    <p>
+      The first electric traffic light was installed in Cleveland, Ohio in 1914.  
+      Modern traffic lights help keep cities safe and organized, reducing accidents and congestion.
+    </p>
+  </section>
+
+  <!-- HOME BUTTON -->
+  <button id="homeBtn">Home</button>
+
+
+</body>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("homeBtn").addEventListener("click", function() {
+      window.location.href = "index.html"; // navigates to home page
+    });
+  </script>
+</html>
